@@ -38,28 +38,28 @@ D  -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 ```text
 E  -> E X1 | E X2 | T
-X1 -> PLUS T
-X2 -> MINUS T
+X1 -> MAIS T
+X2 -> MENOS T
 
 T  -> T X3 | T X4 | P
 X3 -> MULT P
 X4 -> DIV P
 
 P  -> F X5 | F
-X5 -> POW P
+X5 -> POT P
 
-F  -> LP Y1 | N | NEG N
-Y1 -> E RP
+F  -> EP Y1 | N | NEG N
+Y1 -> E DP
 
 N  -> D N | D
 
-PLUS  -> +
-MINUS -> -
+MAIS  -> +
+MENOS -> -
 MULT  -> *
 DIV   -> /
-POW   -> ^
-LP    -> (
-RP    -> )
+POT   -> ^
+EP    -> (
+DP    -> )
 NEG   -> -
 
 D -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
