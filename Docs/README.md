@@ -95,20 +95,30 @@ Expressão:
 
 ### Representação em árvore:
 
-```text
-subtracao
-├── potencia
-│   ├── 9
-│   └── soma
-│       ├── multiplicacao
-│       │   ├── 1
-│       │   └── -2
-│       └── 3
-└── divisao
-    ├── 3
-    └── soma
-        ├── 6
-        └── 3
+```mermaid
+
+graph TD
+    A[subtracao]
+
+    A --> B[potencia]
+    A --> C[divisao]
+
+    B --> D[9]
+    B --> E[soma]
+
+    E --> F[multiplicacao]
+    E --> G[3]
+
+    F --> H[1]
+    F --> I[-2]
+
+    C --> J[3]
+    C --> K[soma]
+
+    K --> L[6]
+    K --> M[3]
+
+
 ```
 
 ---
